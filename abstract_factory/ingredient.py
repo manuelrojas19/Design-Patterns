@@ -81,9 +81,16 @@ class Veggies(ABC):
     def __str__(self) -> str:
         pass
 
+    @abstractmethod
+    def __repr__(self) -> str:
+        pass
+
 
 class Garlic(Veggies):
     def __str__(self) -> str:
+        return 'Garlic'
+
+    def __repr__(self) -> str:
         return 'Garlic'
 
 
@@ -91,12 +98,21 @@ class Onion(Veggies):
     def __str__(self) -> str:
         return 'Onion'
 
+    def __repr__(self) -> str:
+        return 'Onion'
+
 
 class Mushroom(Veggies):
     def __str__(self) -> str:
         return 'Mushroom'
 
+    def __repr__(self) -> str:
+        return 'Mushroom'
+
 
 class RedPapper(Veggies):
     def __str__(self) -> str:
+        return 'RedPapper'
+
+    def __repr__(self) -> str:
         return 'RedPapper'

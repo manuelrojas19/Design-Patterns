@@ -1,4 +1,3 @@
-
 from abc import ABC, abstractmethod
 from ingredient_factory import ChicagoIngredientFactory, NYIngredientFactory
 from pizza import PepperoniPizza, Pizza
@@ -29,7 +28,8 @@ class NYPizzaStore(PizzaStore):
         if (item == 'pepperoni'):
             pizza = PepperoniPizza(self.ingredientFactory)
             pizza.name = 'New York Style Cheese Pizza'
-        """ TODO: add more pizzas """
+        
+        """ TODO: add more pizzas types """
 
         return pizza
 

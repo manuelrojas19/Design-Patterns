@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
-from ingredient import Cheese, Dough, Pepperoni, Sauce
+from typing import List
+from ingredient import Cheese, Dough, Pepperoni, Sauce, Veggies
 from ingredient_factory import IngredientFactory
 
 
@@ -28,6 +29,10 @@ class Pizza(ABC):
     def pepperoni(self) -> Pepperoni:
         pass
 
+    @property
+    def veggies(self) -> List:
+        pass
+
     @abstractmethod
     def prepare(self) -> None:
         pass
@@ -51,6 +56,8 @@ class Pizza(ABC):
             pizzaStr += f'  Cheese: {self.cheese} \n'
         if(self.pepperoni):
             pizzaStr += f'  Pepperoni: {self.pepperoni} \n'
+        if(self.veggies):
+            pizzaStr += f'  Veggies: {self.veggies} \n'
         return pizzaStr
 
 
@@ -61,6 +68,7 @@ class PepperoniPizza(Pizza):
     cheese = None
     veggies = None
     pepperoni = None
+    veggies = []
 
     def __init__(self, ingredientFactory: IngredientFactory) -> None:
         self.ingredientFactory = ingredientFactory
@@ -72,3 +80,4 @@ class PepperoniPizza(Pizza):
         self.cheese = self.ingredientFactory.createCheese()
         self.veggies = self.ingredientFactory.createVeggies()
         self.pepperoni = self.ingredientFactory.createPepperoni()
+        self.veggies = self.ingredientFactory.createVeggies()

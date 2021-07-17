@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from typing import List
 from ingredient import *
 
 
@@ -24,7 +25,7 @@ class IngredientFactory(ABC):
         pass
 
     @abstractmethod
-    def createVeggies(self) -> Veggies:
+    def createVeggies(self) -> List:
         pass
 
 
