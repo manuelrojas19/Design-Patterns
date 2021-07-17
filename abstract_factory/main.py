@@ -1,8 +1,7 @@
 from pizza import Pizza
 from pizza_store import ChicagoPizzaStore, NYPizzaStore, PizzaStore
 
-
-if __name__ == "__main__":
+def main():
     store: PizzaStore
     pizza: Pizza
 
@@ -13,3 +12,7 @@ if __name__ == "__main__":
     store = ChicagoPizzaStore()
     pizza = store.orderPizza('pepperoni')
     print(pizza)
+
+
+if __name__ == "__main__":
+    main()

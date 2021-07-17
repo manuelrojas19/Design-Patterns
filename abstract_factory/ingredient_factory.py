@@ -4,7 +4,7 @@ from ingredient import *
 
 class IngredientFactory(ABC):
     @abstractmethod
-    def createDough(self) -> Dought:
+    def createDough(self) -> Dough:
         pass
 
     @abstractmethod
@@ -29,7 +29,7 @@ class IngredientFactory(ABC):
 
 
 class NYIngredientFactory(IngredientFactory):
-    def createDough(self) -> Dought:
+    def createDough(self) -> Dough:
         return ThinCrustDough()
 
     def createCheese(self) -> Cheese:
@@ -42,14 +42,14 @@ class NYIngredientFactory(IngredientFactory):
         return MarianaSauce()
 
     def createPepperoni(self) -> Pepperoni:
-        return SlicedPeperoni()
+        return SlicedPepperoni()
 
     def createVeggies(self) -> Veggies:
         return [Garlic(), Onion(), Mushroom(), RedPapper()]
 
 
 class ChicagoIngredientFactory(IngredientFactory):
-    def createDough(self) -> Dought:
+    def createDough(self) -> Dough:
         return ThickCrustDough()
 
     def createCheese(self) -> Cheese:
@@ -62,7 +62,7 @@ class ChicagoIngredientFactory(IngredientFactory):
         return PlumTomatoSauce()
 
     def createPepperoni(self) -> Pepperoni:
-        return SlicedPeperoni()
+        return SlicedPepperoni()
 
     def createVeggies(self) -> Veggies:
         return [Garlic(), Onion(), Mushroom(), RedPapper()]

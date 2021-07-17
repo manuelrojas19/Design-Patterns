@@ -36,6 +36,6 @@ class ChicagoPizzaStore(PizzaStore):
         if (item == 'pepperoni'):
             pizza = PepperoniPizza(self.ingredientFactory)
 
-        """ TODO: add more pizzas """
+        """ TODO: add more pizzas types """
 
         return pizza

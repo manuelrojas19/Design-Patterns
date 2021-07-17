@@ -1,18 +1,18 @@
 from abc import ABC, abstractmethod
 
 
-class Dought(ABC):
+class Dough(ABC):
     @abstractmethod
     def __str__(self) -> str:
         pass
 
 
-class ThickCrustDough(Dought):
+class ThickCrustDough(Dough):
     def __str__(self) -> str:
         return 'Thick Crust Dough'
 
 
-class ThinCrustDough(Dought):
+class ThinCrustDough(Dough):
     def __str__(self) -> str:
         return 'Thin Crust Dough'
 
@@ -70,9 +70,9 @@ class Pepperoni(ABC):
     def __str__(self) -> str:
         pass
 
-class SlicedPeperoni(Pepperoni):
+class SlicedPepperoni(Pepperoni):
     def __str__(self) -> str:
-        return 'SlicedPeperoni'  
+        return 'SlicedPepperoni'  
 
 
 
