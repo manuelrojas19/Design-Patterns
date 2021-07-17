@@ -5,33 +5,12 @@ from ingredient_factory import IngredientFactory
 
 
 class Pizza(ABC):
-    @property
-    def name(self):
-        return f'{self.name}'
-
-    @name.setter
-    def name(self, name):
-        self.name = name
-
-    @property
-    def dough(self) -> Dough:
-        pass
-
-    @property
-    def sauce(self) -> Sauce:
-        pass
-
-    @property
-    def cheese(self) -> Cheese:
-        pass
-
-    @property
-    def pepperoni(self) -> Pepperoni:
-        pass
-
-    @property
-    def veggies(self) -> List:
-        pass
+    name: str
+    dough: Dough
+    sauce: Sauce
+    cheese: Cheese
+    pepperoni: Pepperoni
+    veggies: List[Veggies]
 
     @abstractmethod
     def prepare(self) -> None:
@@ -62,14 +41,6 @@ class Pizza(ABC):
 
 
 class PepperoniPizza(Pizza):
-    name = None
-    dough = None
-    sauce = None
-    cheese = None
-    veggies = None
-    pepperoni = None
-    veggies = []
-
     def __init__(self, ingredientFactory: IngredientFactory) -> None:
         self.ingredientFactory = ingredientFactory
 

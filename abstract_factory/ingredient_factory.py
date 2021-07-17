@@ -25,7 +25,7 @@ class IngredientFactory(ABC):
         pass
 
     @abstractmethod
-    def createVeggies(self) -> List:
+    def createVeggies(self) -> List[Veggies]:
         pass
 
 
@@ -65,5 +65,5 @@ class ChicagoIngredientFactory(IngredientFactory):
     def createPepperoni(self) -> Pepperoni:
         return SlicedPepperoni()
 
-    def createVeggies(self) -> Veggies:
+    def createVeggies(self) -> List[Veggies]:
         return [Garlic(), Onion(), Mushroom(), RedPapper()]
