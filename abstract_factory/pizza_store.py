@@ -11,7 +11,13 @@ class PizzaStore(ABC):
 
     def orderPizza(self, type: str) -> Pizza:
         pizza = self.createPizza(type)
+
+        print('------------------------------------------')
+        print(f'Making a {pizza.name}')
         pizza.prepare()
+        pizza.bake()
+        pizza.cut()
+        pizza.box()
         return pizza
 
 
@@ -22,7 +28,7 @@ class NYPizzaStore(PizzaStore):
     def createPizza(self, item: str) -> Pizza:
         if (item == 'pepperoni'):
             pizza = PepperoniPizza(self.ingredientFactory)
-
+            pizza.name = 'New York Style Cheese Pizza'
         """ TODO: add more pizzas """
 
         return pizza
@@ -35,6 +41,7 @@ class ChicagoPizzaStore(PizzaStore):
     def createPizza(self, item: str) -> Pizza:
         if (item == 'pepperoni'):
             pizza = PepperoniPizza(self.ingredientFactory)
+            pizza.name = 'Chicago Style Cheese Pizza'
 
         """ TODO: add more pizzas types """
 

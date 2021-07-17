@@ -5,6 +5,14 @@ from ingredient_factory import IngredientFactory
 
 class Pizza(ABC):
     @property
+    def name(self):
+        return f'{self.name}'
+
+    @name.setter
+    def name(self, name):
+        self.name = name
+
+    @property
     def dough(self) -> Dough:
         pass
 
@@ -24,22 +32,30 @@ class Pizza(ABC):
     def prepare(self) -> None:
         pass
 
+    def bake(self) -> None:
+        print('Bake for 25 minutes at 350')
+
+    def cut(self) -> None:
+        print('Cutting the pizza into diagonal slices')
+
+    def box(self) -> None:
+        print('Place the pizza in official PizzaStore box')
+
     def __str__(self) -> str:
-        pizzaStr = 'Pizza { \n'
+        pizzaStr = f'{self.name}: \n'
         if(self.dough):
-            pizzaStr += '\t Dough { \n \t\t' + str(self.dough) + '\n\t} \n'
+            pizzaStr += f'  Dough: {self.dough} \n'
         if(self.sauce):
-            pizzaStr += '\t Sauce { \n \t\t' + str(self.sauce) + '\n\t} \n'
+            pizzaStr += f'  Sauce: {self.sauce} \n'
         if(self.cheese):
-            pizzaStr += '\t Cheese { \n \t\t' + str(self.cheese) + '\n\t} \n'
+            pizzaStr += f'  Cheese: {self.cheese} \n'
         if(self.pepperoni):
-            pizzaStr += '\t Pepperoni { \n \t\t' + \
-                str(self.pepperoni) + '\n\t} \n'
-        pizzaStr += '}'
+            pizzaStr += f'  Pepperoni: {self.pepperoni} \n'
         return pizzaStr
 
 
 class PepperoniPizza(Pizza):
+    name = None
     dough = None
     sauce = None
     cheese = None
@@ -50,6 +66,7 @@ class PepperoniPizza(Pizza):
         self.ingredientFactory = ingredientFactory
 
     def prepare(self) -> None:
+        print(f'Preparing a {self.name}')
         self.dough = self.ingredientFactory.createDough()
         self.sauce = self.ingredientFactory.createSauce()
         self.cheese = self.ingredientFactory.createCheese()

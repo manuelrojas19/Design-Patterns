@@ -70,10 +70,10 @@ class Pepperoni(ABC):
     def __str__(self) -> str:
         pass
 
+
 class SlicedPepperoni(Pepperoni):
     def __str__(self) -> str:
-        return 'SlicedPepperoni'  
-
+        return 'SlicedPepperoni'
 
 
 class Veggies(ABC):
