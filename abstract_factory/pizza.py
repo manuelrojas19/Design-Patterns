@@ -3,6 +3,8 @@ from typing import List
 from ingredient import Cheese, Dough, Pepperoni, Sauce, Veggies
 from ingredient_factory import IngredientFactory
 
+"""This class represents an abstract client wich is the product to implement"""
+
 
 class Pizza(ABC):
     name: str
@@ -14,7 +16,7 @@ class Pizza(ABC):
 
     @abstractmethod
     def prepare(self) -> None:
-        pass
+        raise NotImplementedError
 
     def bake(self) -> None:
         print('Bake for 25 minutes at 350')
@@ -39,6 +41,10 @@ class Pizza(ABC):
             pizzaStr += f'  Veggies: {self.veggies} \n'
         return pizzaStr
 
+""" This classes represents a concrete client wich uses a factory to produce a certain family of objects,
+    since the behavior of create objects its encapsulated the client does not know wich family of objects
+    was created.
+"""
 
 class PepperoniPizza(Pizza):
     def __init__(self, ingredientFactory: IngredientFactory) -> None:
