@@ -4,7 +4,7 @@ from ingredient import *
 
 """ This class represents an Abstract Factory wich provides an interface wich consists of a set of 
     methods for producing a family of concrete objects this interfaces must be implemented
-    by all the concrete class, the concrete factories. 
+    by all the concrete class, the concrete factories.
 """
 
 

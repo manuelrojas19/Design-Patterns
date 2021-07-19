@@ -3,7 +3,7 @@ from typing import List
 from ingredient import Cheese, Dough, Pepperoni, Sauce, Veggies
 from ingredient_factory import IngredientFactory
 
-"""This class represents an abstract client wich is the product to implement"""
+"""This class represents an abstract client wich is the product to implement. """
 
 
 class Pizza(ABC):

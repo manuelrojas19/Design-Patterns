@@ -5,7 +5,7 @@
     regions, operating systems, or different look and fell.
 
     Since our code is decoupled from the actual objects, we can substitute different factories to get different
-    behaviors
+    behaviors.
 """
 
 from pizza import Pizza

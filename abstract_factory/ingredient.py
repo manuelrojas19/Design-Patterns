@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 """ This is the product or object family. Each concrete factory can produces an
-    entire set of this
+    entire set of this.
 """
 class Dough(ABC):
     @abstractmethod

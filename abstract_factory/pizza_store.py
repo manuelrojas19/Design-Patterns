@@ -3,7 +3,7 @@ from ingredient_factory import ChicagoIngredientFactory, IngredientFactory, NYIn
 from pizza import PepperoniPizza, Pizza
 
 """ This class Represent a factory method because we want to be able to create a product that
-    varies by region, this class provides an abstract interface for creating one product """
+    varies by region, this class provides an abstract interface for creating one product. """
 
 
 class PizzaStore(ABC):
