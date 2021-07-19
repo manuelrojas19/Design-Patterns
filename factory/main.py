@@ -4,7 +4,11 @@
     The Factory Pattern is usefull if we have got one concrete creator because we are decoupling
     the implementation of the product from its use. If we add additional products or change a pro
     ducts implementation, it wont affect our creator because this is not tighly coupled to any
-    concrete product
+    concrete product.
+
+    Reducing dependencies to concrete class its a good thing, a OO design principle that formalizes
+    this notion is the Dependency Inversion Principle wich indicates depend upon abstractions instead
+    concrete classes.
 """
 
 from pizza import Pizza
