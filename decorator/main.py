@@ -13,7 +13,7 @@ def main():
     beverage2 = Mocha(beverage)
     print(f'{beverage2.getDescription()} ${beverage2.cost()}')
 
-    beverage3 = Mocha(beverage)
+    beverage3 = Mocha(beverage2)
     print(f'{beverage3.getDescription()} ${beverage3.cost()}')
 
 
