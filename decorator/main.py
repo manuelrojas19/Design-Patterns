@@ -10,11 +10,11 @@ def main():
     beverage = Espresso()
     print(f'{beverage.getDescription()} ${beverage.cost()}')
 
-    beverage = Mocha(beverage)
-    print(f'{beverage.getDescription()} ${beverage.cost()}')
+    beverage2 = Mocha(beverage)
+    print(f'{beverage2.getDescription()} ${beverage2.cost()}')
 
-    beverage = Mocha(beverage)
-    print(f'{beverage.getDescription()} ${beverage.cost()}')
+    beverage3 = Mocha(beverage)
+    print(f'{beverage3.getDescription()} ${beverage3.cost()}')
 
 
 if __name__ == '__main__':
